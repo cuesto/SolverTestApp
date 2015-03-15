@@ -17,6 +17,7 @@ namespace SolverTestApp
             double pArroz = 20;
             double pAceite = 280;
             double pHabichuela = 25;
+            double presupuesto = 1500;
 
             var decisionX = new Decision(Domain.IntegerNonnegative, "Arroz");
             var decisionY = new Decision(Domain.IntegerNonnegative, "Aceite");
@@ -34,7 +35,7 @@ namespace SolverTestApp
             model.AddConstraint("cantminZ", decisionZ >= 1);
             model.AddConstraint("cantmaxZ", decisionZ <= 3);
             model.AddConstraint("Total", tGoal >= 1);
-            model.AddConstraint("Solucion", tGoal <= 2000);
+            model.AddConstraint("Solucion", tGoal <= presupuesto);
             solver.CheckModel();
 
             var solution = solver.Solve();
