@@ -1,0 +1,30 @@
+NAME          MODEL
+ROWS
+ G  cantminX
+ L  cantmaxX
+ G  cantminY
+ L  cantmaxY
+ G  cantminZ
+ L  cantmaxZ
+ G  Total   
+ L  Solucion
+ N  Meta    
+COLUMNS
+    INTMARK   'MARKER'                 'INTORG'
+    Arroz     cantminX  1              cantmaxX  1
+    Arroz     Total     20             Solucion  20
+    Arroz     Meta      -20           
+    Aceite    cantminY  1              cantmaxY  1
+    Aceite    Total     280            Solucion  280
+    Aceite    Meta      -280          
+    Habichuela  cantminZ  1              cantmaxZ  1
+    Habichuela  Total     25             Solucion  25
+    Habichuela  Meta      -25           
+    INTMARK   'MARKER'                 'INTEND'
+RHS
+    RHS       cantminX  20             cantmaxX  40
+    RHS       cantminY  1              cantmaxY  3
+    RHS       cantminZ  1              cantmaxZ  3
+    RHS       Total     1              Solucion  1050
+BOUNDS
+ENDATA
